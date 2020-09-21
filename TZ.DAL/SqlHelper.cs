@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TZ.DAL
 {
-    public class SqlHelper
+    public static class SqlHelper
     {
         private static readonly string constr = ConfigurationManager.ConnectionStrings["Dbcon"].ConnectionString;
         public static int ExecuteNonQuery(string sql, SqlParameter[] param)
