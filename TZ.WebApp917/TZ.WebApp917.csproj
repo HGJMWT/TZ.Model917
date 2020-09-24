@@ -119,7 +119,10 @@
     <Content Include="Admins\assets\vendor\toastr\toastr.min.css" />
     <Content Include="Admins\assets\vendor\toastr\toastr.min.js" />
     <Content Include="Admins\Copyright\Copyright_List.aspx" />
+    <Content Include="Admins\Roles\Roles_Add.aspx" />
+    <Content Include="Admins\Roles\Roles_Edit.aspx" />
     <Content Include="Admins\Roles\Roles_List.aspx" />
+    <Content Include="Admins\Roles\Roles_Remove.aspx" />
     <Content Include="Admins\Seo\Seo_List.aspx" />
     <Content Include="Admins\SystemMenus\SystemMenus_List.aspx" />
     <Content Include="Admins\UsersPermission\UsersPermission.aspx" />
@@ -272,12 +275,33 @@
     <Compile Include="Admins\Copyright\Copyright_List.aspx.designer.cs">
       <DependentUpon>Copyright_List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admins\Roles\Roles_Add.aspx.cs">
+      <DependentUpon>Roles_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Roles\Roles_Add.aspx.designer.cs">
+      <DependentUpon>Roles_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Roles\Roles_Edit.aspx.cs">
+      <DependentUpon>Roles_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Roles\Roles_Edit.aspx.designer.cs">
+      <DependentUpon>Roles_Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admins\Roles\Roles_List.aspx.cs">
       <DependentUpon>Roles_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admins\Roles\Roles_List.aspx.designer.cs">
       <DependentUpon>Roles_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Roles\Roles_Remove.aspx.cs">
+      <DependentUpon>Roles_Remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Roles\Roles_Remove.aspx.designer.cs">
+      <DependentUpon>Roles_Remove.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admins\Seo\Seo_List.aspx.cs">
       <DependentUpon>Seo_List.aspx</DependentUpon>
@@ -355,6 +379,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TZ.BLL\TZ.BLL.csproj">
+      <Project>{63940f12-3d58-4373-9deb-2427c2054e78}</Project>
+      <Name>TZ.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TZ.Model917\TZ.Model917.csproj">
+      <Project>{b093ae69-42f4-460a-adfb-3cf3f9718d5c}</Project>
+      <Name>TZ.Model917</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

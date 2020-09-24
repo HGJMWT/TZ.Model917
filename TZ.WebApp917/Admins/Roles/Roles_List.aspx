@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-4">
                 <button class="btn btn-primary">Go!</button>
-                <button class="btn btn-success">Insert</button>
+                <a href="Roles_Add.aspx" class="btn btn-success">Insert</a>
                 <button class="btn btn-danger">Delete</button>
             </div>
         </div>
@@ -24,19 +24,31 @@
                    <table class="table table-bordered table-hover">
                        <thead>
                        <tr>
-                           <th>编号</th>
-                           <th>权限名称</th>
-                           <th>编辑</th>
-                           <th>删除</th>
+                           <th width="5%">编号</th>
+                           <th width="20%">权限名称</th>
+                           <th width="5%">编辑</th>
+                           <th width="5%">删除</th>
                        </tr>
                        </thead>
                        <tbody>
-                       <tr>
-                           <td>11111</td>
-                           <td>管理人</td>
-                           <td><a href="#">增改</a></td>
-                           <td><a href="#">删除</a></td>
-                       </tr>
+                       <asp:Repeater ID="RepRolesList" runat="server">
+                           <ItemTemplate>
+                               <tr>
+                                   <td><%#Container.ItemIndex+1 %></td>
+                                   <td><%#Eval("Roles_Title") %></td>
+                                   <td>
+                                       <a class="btn btn-warning" href='Roles_Edit.aspx?action=<%# Eval("Id")%>'>
+                                           <span class="lnr lnr-pencil"></span>修改
+                                       </a>
+                                   </td>
+                                   <td>
+                                       <a class="btn btn-danger" href='Roles_Remove.aspx?action=<%# Eval("Id")%>'>
+                                           <span class="lnr lnr-trash"></span>删除
+                                       </a>
+                                   </td>
+                               </tr>
+                           </ItemTemplate>
+                       </asp:Repeater>
                        </tbody>
                    </table>
                </div>
