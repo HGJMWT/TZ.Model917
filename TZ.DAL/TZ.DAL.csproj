@@ -45,6 +45,7 @@
     <Compile Include="RolesManager.cs" />
     <Compile Include="SqlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TZ.Model917\TZ.Model917.csproj">

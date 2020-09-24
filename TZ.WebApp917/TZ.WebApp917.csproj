@@ -126,7 +126,10 @@
     <Content Include="Admins\Seo\Seo_List.aspx" />
     <Content Include="Admins\SystemMenus\SystemMenus_List.aspx" />
     <Content Include="Admins\UsersPermission\UsersPermission.aspx" />
+    <Content Include="Admins\Users\Users_Add.aspx" />
+    <Content Include="Admins\Users\Users_Edit.aspx" />
     <Content Include="Admins\Users\Users_List.aspx" />
+    <Content Include="Admins\Users\Users_Remove.aspx" />
     <Content Include="Admins\WebMenu\WebMenu_List.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -331,12 +334,33 @@
     <Compile Include="Admins\UsersPermission\UsersPermission.aspx.designer.cs">
       <DependentUpon>UsersPermission.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admins\Users\Users_Add.aspx.cs">
+      <DependentUpon>Users_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Users\Users_Add.aspx.designer.cs">
+      <DependentUpon>Users_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Users\Users_Edit.aspx.cs">
+      <DependentUpon>Users_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Users\Users_Edit.aspx.designer.cs">
+      <DependentUpon>Users_Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admins\Users\Users_List.aspx.cs">
       <DependentUpon>Users_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admins\Users\Users_List.aspx.designer.cs">
       <DependentUpon>Users_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Users\Users_Remove.aspx.cs">
+      <DependentUpon>Users_Remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Users\Users_Remove.aspx.designer.cs">
+      <DependentUpon>Users_Remove.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admins\WebMenu\WebMenu_List.aspx.cs">
       <DependentUpon>WebMenu_List.aspx</DependentUpon>

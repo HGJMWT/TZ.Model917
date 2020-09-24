@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-4">
                 <button class="btn btn-primary">Go!</button>
-                <button class="btn btn-success">Insert</button>
+                <a href="Users_Add.aspx" class="btn btn-success">Insert</a>
                 <button class="btn btn-danger">Delete</button>
             </div>
         </div>
@@ -24,21 +24,39 @@
                    <table class="table table-bordered table-hover">
                        <thead>
                        <tr>
-                           <th>用户Id</th>
-                           <th>用户账号</th>
-                           <th>用户密码</th>
-                           <th>用户头像</th>
-                           <th>身份编号</th>
+                           <th width="5%">用户Id</th>
+                           <th width="5%">用户账号</th>
+                           <th width="5%">用户密码</th>
+                           <th width="5%">用户昵称</th>
+                           <th width="5%">用户头像</th>
+                           <th width="5%">身份编号</th>
+                           <th width="5%">编辑</th>
+                           <th width="5%">删除</th>
                        </tr>
                        </thead>
                        <tbody>
-                       <tr>
-                           <td>tz</td>
-                           <td>tz</td>
-                           <td>tz</td>
-                           <td>tz</td>
-                           <td>tz</td>
-                       </tr>
+                       <asp:Repeater ID="RepUsersList" runat="server">
+                           <ItemTemplate>
+                               <tr>
+                                   <td><%#Container.ItemIndex+1 %></td>
+                                   <td><%#Eval("Users_Account") %></td>
+                                   <td><%#Eval("Users_Password") %></td>
+                                   <td><%#Eval("Users_NickName") %></td>
+                                   <td><%#Eval("Users_Photo") %></td>
+                                   <td><%#Eval("Users_RolesId") %></td>
+                                   <td>
+                                       <a class="btn btn-warning" href='Users_Edit.aspx?action=<%# Eval("Id")%>'>
+                                           <span class="lnr lnr-pencil"></span>修改
+                                       </a>
+                                   </td>
+                                   <td>
+                                       <a class="btn btn-danger" href='Users_Remove.aspx?action=<%# Eval("Id")%>'>
+                                           <span class="lnr lnr-trash"></span>删除
+                                       </a>
+                                   </td>
+                               </tr>
+                           </ItemTemplate>
+                       </asp:Repeater>
                        </tbody>
                    </table>
                </div>
