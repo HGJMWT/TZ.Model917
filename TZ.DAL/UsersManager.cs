@@ -33,18 +33,18 @@ namespace TZ.DAL
         public int EditUsers(Users users)
         {
             string sql =
-                "update Users set Users_Account = @Users_Account,Users_Password = @Users_Password,Users_NickName = @Users_NickName,Users_Photo = @Users_Photo,Users_UpdateTime = @Users_UpdateTime where Users_Id = @Users_Id";
+                "update Users set Users_Password = @Users_Password,Users_NickName = @Users_NickName,Users_RolesId = @Users_RolesId,Users_UpdateTime = @Users_UpdateTime where Users_Id = @Users_Id";
             SqlParameter[] param =
             {
-                new SqlParameter("@Users_Account", users.Users_Account),
                 new SqlParameter("@Users_Password", users.Users_Password),
                 new SqlParameter("@Users_NickName", users.Users_NickName),
-                new SqlParameter("@Users_Photo", users.Users_Photo),
+                new SqlParameter("@Users_RolesId", users.Users_RolesId),
                 new SqlParameter("@Users_UpdateTime", users.UpdateTime),
                 new SqlParameter("@Users_Id", users.Id)
             };
             return SqlHelper.ExecuteNonQuery(sql, param);
         }
+
         public int PutTrash(Guid id)
         {
             string sql = "update Users set Users_DeleteId = 0 where Users_Id = @Users_Id";
@@ -53,6 +53,100 @@ namespace TZ.DAL
                 new SqlParameter("@Users_Id",id)
             };
             return SqlHelper.ExecuteNonQuery(sql, param);
+        }
+
+        public int RemoveUsers(Guid id)
+        {
+            string sql = "delete from Users where Users_DeleteId = 0 and Users_Id = @Users_Id";
+            SqlParameter[] param =
+            {
+                new SqlParameter("@Users_Id",id)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, param);
+        }
+
+        public List<Users> GetAll()
+        {
+            string sql = "select * from Users where Users_DeleteId = 1 order by Users_UpdateTime desc";
+            var dt = SqlHelper.Query(sql, null);
+            return FillData(dt);
+        }
+
+        public Users GetUsersById(Guid id)
+        {
+            string sql = "select * from Users where  Users_Id = @Users_Id";
+            SqlParameter[] param =
+            {
+                new SqlParameter("@Users_Id",id)
+            };
+            var list = FillData(SqlHelper.Query(sql, param));
+            return list.FirstOrDefault();
+        }
+
+        public List<Users> GetUsersByNickName(string nickName)
+        {
+            string sql = "select * from Users where Users_DeleteId = 1 and Users_NickName like '%" + nickName + "%'";
+            var dt = SqlHelper.Query(sql, null);
+            return FillData(dt);
+        }
+
+        public int ChangePwd(Users users)
+        {
+            string sql = "update Users set Users_Password= @Users_PassWord where Users_Account=@Users_Account";
+            SqlParameter[] param =
+            {
+                new SqlParameter("@Users_PassWord",users.Users_Password),
+                new SqlParameter("@Users_Account",users.Users_Account)
+            };
+            return SqlHelper.ExecuteNonQuery(sql, param);
+        }
+
+        public Users SignIn(string account, string password)
+        {
+            string sql =
+                "select * from Users where Users_DeleteId =1 and Users_Account=@Users_Account and Users_PassWord=@Users_PassWord";
+            SqlParameter[] param =
+            {
+                new SqlParameter("@Users_Account",account),
+                new SqlParameter("@Users_PassWord",password)
+            };
+            var dt = SqlHelper.Query(sql, param);
+            return FillData(dt).FirstOrDefault();
+        }
+
+        public List<Users> GetUsersInTrash()
+        {
+            string sql = "select * from Users where Users_DeleteId=0";
+            var dt = SqlHelper.Query(sql, null);
+            return FillData(dt);
+        }
+
+        public int RestoreUsers(Guid id)
+        {
+            string sql = "update Users set Users_DeleteId = 1 where Users_Id = @Users_id";
+            SqlParameter[] param =
+            {
+                new SqlParameter("@Users_Id",id), 
+            };
+            return SqlHelper.ExecuteNonQuery(sql, param);
+        }
+
+        public List<Users> GetUsersInTrashByNickName(string nickName)
+        {
+            string sql = "select * from Users where Users_DeleteId = 0 and Users_NickName like '%" + nickName + "%'";
+            var dt = SqlHelper.Query(sql, null);
+            return FillData(dt);
+        }
+
+        public bool IsExists(string account)
+        {
+            string sql = "select* from Users where Users_DeleteId = 1 and Users_Account=@Users_Account";
+            SqlParameter[] param =
+            {
+                new SqlParameter("@Users_Account", account),
+            };
+            var dt = SqlHelper.Query(sql, param);
+            return dt.Rows.Count > 0;
         }
 
         public List<Users> FillData(DataTable dt)
@@ -74,25 +168,6 @@ namespace TZ.DAL
                 list.Add(item);
             }
             return list;
-        }
-
-        public List<Users> GetAll()
-        {
-            string sql = "select * from Users where Users_DeleteId = 1 order by Users_UpdateTime desc";
-            var data = SqlHelper.Query(sql, null);
-            List<Users> list = FillData(data);
-            return list;
-        }
-        public Users GetUsersById(Guid id)
-        {
-            string sql = "select * from Users where Users_DeleteId = 1 and Users_Id = @Users_Id";
-            SqlParameter[] param =
-            {
-                new SqlParameter("@Users_Id",id)
-            };
-            var dt = SqlHelper.Query(sql, param);
-            var data = FillData(dt).FirstOrDefault();
-            return data;
         }
     }
 }

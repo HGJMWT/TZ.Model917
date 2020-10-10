@@ -27,7 +27,6 @@ namespace TZ.WebApp917.Admins.Users
             this.txtAccount.Text = data.Users_Account;
             this.txtPassword.Text = data.Users_Password;
             this.txtNickName.Text = data.Users_NickName;
-            this.txtPhoto.Text = data.Users_Photo;
             this.txtRolesId.Text = data.Users_RolesId.ToString();
         }
 
@@ -36,7 +35,6 @@ namespace TZ.WebApp917.Admins.Users
             var Account = this.txtAccount.Text.Trim();
             var Password = this.txtPassword.Text.Trim();
             var NickName = this.txtNickName.Text.Trim();
-            var Photo = this.txtPhoto.Text.Trim();
             var RolesId = this.txtRolesId.Text.Trim();
             Model917.Users user = new Model917.Users()
             {
@@ -44,7 +42,6 @@ namespace TZ.WebApp917.Admins.Users
                 Users_Account = Account,
                 Users_Password = Password,
                 Users_NickName = NickName,
-                Users_Photo = Photo,
                 Users_RolesId = Guid.Parse(RolesId)
             };
             var res = usersSvc.EditUsers(user);

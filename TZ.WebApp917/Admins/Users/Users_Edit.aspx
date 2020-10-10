@@ -16,12 +16,16 @@
                     <div class="form-group">
                         <label>用户账号:</label>
                         <asp:TextBox ID="txtAccount" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
                         <label>用户密码:</label>
                         <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
                         <label>用户昵称:</label>
                         <asp:TextBox ID="txtNickName" runat="server" CssClass="form-control"></asp:TextBox>
-                        <label>用户头像:</label>
-                        <asp:TextBox ID="txtPhoto" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
                         <label>用户身份编号:</label>
                         <asp:TextBox ID="txtRolesId" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>

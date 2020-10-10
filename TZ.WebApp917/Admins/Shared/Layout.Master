@@ -21,12 +21,17 @@
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <style>
         .mb-1 {
             margin-bottom: 10px;
         }
 		table tr td,th {
             text-align: center;
+        }
+		.msg {
+            color: red;
+            font-size: 10px;
         }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
