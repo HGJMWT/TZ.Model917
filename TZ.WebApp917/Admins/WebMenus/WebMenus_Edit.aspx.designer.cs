@@ -7,47 +7,56 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace TZ.WebApp917.Admins.SystemMenus
+namespace TZ.WebApp917.Admins.WebMenus
 {
 
 
-    public partial class SystemMenus_List
+    public partial class WebMenus_Edit
     {
 
         /// <summary>
-        /// txtSearch 控件。
+        /// txtId 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
-        /// btnSearch 控件。
+        /// txtTitle 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle;
 
         /// <summary>
-        /// RepSystemMenusList 控件。
+        /// txtLink 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepSystemMenusList;
+        protected global::System.Web.UI.WebControls.TextBox txtLink;
 
         /// <summary>
-        /// AspNetPager1 控件。
+        /// BtnSubmit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
+        protected global::System.Web.UI.WebControls.Button BtnSubmit;
+
+        /// <summary>
+        /// BtnReset 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnReset;
     }
 }

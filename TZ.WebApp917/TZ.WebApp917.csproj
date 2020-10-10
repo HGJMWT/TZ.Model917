@@ -123,18 +123,31 @@
     <Content Include="Admins\assets\vendor\toastr\toastr.min.css" />
     <Content Include="Admins\assets\vendor\toastr\toastr.min.js" />
     <Content Include="Admins\Copyright\Copyright_List.aspx" />
+    <Content Include="Admins\FriendShips\FriendShips_Add.aspx" />
+    <Content Include="Admins\FriendShips\FriendShips_Edit.aspx" />
+    <Content Include="Admins\FriendShips\FriendShips_List.aspx" />
+    <Content Include="Admins\FriendShips\FriendShips_Remove.aspx" />
     <Content Include="Admins\Roles\Roles_Add.aspx" />
     <Content Include="Admins\Roles\Roles_Edit.aspx" />
     <Content Include="Admins\Roles\Roles_List.aspx" />
     <Content Include="Admins\Roles\Roles_Remove.aspx" />
-    <Content Include="Admins\Seo\Seo_List.aspx" />
+    <Content Include="Admins\Seos\Seos_Add.aspx" />
+    <Content Include="Admins\Seos\Seos_Edit.aspx" />
+    <Content Include="Admins\Seos\Seos_List.aspx" />
+    <Content Include="Admins\Seos\Seos_Remove.aspx" />
+    <Content Include="Admins\SystemMenus\SystemMenus_Add.aspx" />
+    <Content Include="Admins\SystemMenus\SystemMenus_Edit.aspx" />
     <Content Include="Admins\SystemMenus\SystemMenus_List.aspx" />
+    <Content Include="Admins\SystemMenus\SystemMenus_Remove.aspx" />
     <Content Include="Admins\UsersPermission\UsersPermission.aspx" />
     <Content Include="Admins\Users\Users_Add.aspx" />
     <Content Include="Admins\Users\Users_Edit.aspx" />
     <Content Include="Admins\Users\Users_List.aspx" />
     <Content Include="Admins\Users\Users_Remove.aspx" />
-    <Content Include="Admins\WebMenu\WebMenu_List.aspx" />
+    <Content Include="Admins\WebMenus\WebMenus_Add.aspx" />
+    <Content Include="Admins\WebMenus\WebMenus_Edit.aspx" />
+    <Content Include="Admins\WebMenus\WebMenus_List.aspx" />
+    <Content Include="Admins\WebMenus\WebMenus_Remove.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -282,6 +295,34 @@
     <Compile Include="Admins\Copyright\Copyright_List.aspx.designer.cs">
       <DependentUpon>Copyright_List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_Add.aspx.cs">
+      <DependentUpon>FriendShips_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_Add.aspx.designer.cs">
+      <DependentUpon>FriendShips_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_Edit.aspx.cs">
+      <DependentUpon>FriendShips_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_Edit.aspx.designer.cs">
+      <DependentUpon>FriendShips_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_List.aspx.cs">
+      <DependentUpon>FriendShips_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_List.aspx.designer.cs">
+      <DependentUpon>FriendShips_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_Remove.aspx.cs">
+      <DependentUpon>FriendShips_Remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\FriendShips\FriendShips_Remove.aspx.designer.cs">
+      <DependentUpon>FriendShips_Remove.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admins\Roles\Roles_Add.aspx.cs">
       <DependentUpon>Roles_Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,12 +351,33 @@
     <Compile Include="Admins\Roles\Roles_Remove.aspx.designer.cs">
       <DependentUpon>Roles_Remove.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admins\Seo\Seo_List.aspx.cs">
-      <DependentUpon>Seo_List.aspx</DependentUpon>
+    <Compile Include="Admins\Seos\Seos_Add.aspx.cs">
+      <DependentUpon>Seos_Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admins\Seo\Seo_List.aspx.designer.cs">
-      <DependentUpon>Seo_List.aspx</DependentUpon>
+    <Compile Include="Admins\Seos\Seos_Add.aspx.designer.cs">
+      <DependentUpon>Seos_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Seos\Seos_Edit.aspx.cs">
+      <DependentUpon>Seos_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Seos\Seos_Edit.aspx.designer.cs">
+      <DependentUpon>Seos_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Seos\Seos_List.aspx.cs">
+      <DependentUpon>Seos_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Seos\Seos_List.aspx.designer.cs">
+      <DependentUpon>Seos_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\Seos\Seos_Remove.aspx.cs">
+      <DependentUpon>Seos_Remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\Seos\Seos_Remove.aspx.designer.cs">
+      <DependentUpon>Seos_Remove.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admins\Shared\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
@@ -324,12 +386,33 @@
     <Compile Include="Admins\Shared\Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admins\SystemMenus\SystemMenus_Add.aspx.cs">
+      <DependentUpon>SystemMenus_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\SystemMenus\SystemMenus_Add.aspx.designer.cs">
+      <DependentUpon>SystemMenus_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\SystemMenus\SystemMenus_Edit.aspx.cs">
+      <DependentUpon>SystemMenus_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\SystemMenus\SystemMenus_Edit.aspx.designer.cs">
+      <DependentUpon>SystemMenus_Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admins\SystemMenus\SystemMenus_List.aspx.cs">
       <DependentUpon>SystemMenus_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admins\SystemMenus\SystemMenus_List.aspx.designer.cs">
       <DependentUpon>SystemMenus_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\SystemMenus\SystemMenus_Remove.aspx.cs">
+      <DependentUpon>SystemMenus_Remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\SystemMenus\SystemMenus_Remove.aspx.designer.cs">
+      <DependentUpon>SystemMenus_Remove.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admins\UsersPermission\UsersPermission.aspx.cs">
       <DependentUpon>UsersPermission.aspx</DependentUpon>
@@ -366,12 +449,33 @@
     <Compile Include="Admins\Users\Users_Remove.aspx.designer.cs">
       <DependentUpon>Users_Remove.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admins\WebMenu\WebMenu_List.aspx.cs">
-      <DependentUpon>WebMenu_List.aspx</DependentUpon>
+    <Compile Include="Admins\WebMenus\WebMenus_Add.aspx.cs">
+      <DependentUpon>WebMenus_Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admins\WebMenu\WebMenu_List.aspx.designer.cs">
-      <DependentUpon>WebMenu_List.aspx</DependentUpon>
+    <Compile Include="Admins\WebMenus\WebMenus_Add.aspx.designer.cs">
+      <DependentUpon>WebMenus_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\WebMenus\WebMenus_Edit.aspx.cs">
+      <DependentUpon>WebMenus_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\WebMenus\WebMenus_Edit.aspx.designer.cs">
+      <DependentUpon>WebMenus_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\WebMenus\WebMenus_List.aspx.cs">
+      <DependentUpon>WebMenus_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\WebMenus\WebMenus_List.aspx.designer.cs">
+      <DependentUpon>WebMenus_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admins\WebMenus\WebMenus_Remove.aspx.cs">
+      <DependentUpon>WebMenus_Remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admins\WebMenus\WebMenus_Remove.aspx.designer.cs">
+      <DependentUpon>WebMenus_Remove.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -400,7 +504,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="upload\systemmenus\" />
     <Folder Include="upload\users\" />
+    <Folder Include="upload\webmenus\" />
     <Folder Include="Web\" />
   </ItemGroup>
   <ItemGroup>

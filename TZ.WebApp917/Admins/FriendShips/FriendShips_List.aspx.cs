@@ -7,34 +7,28 @@ using System.Web.UI.WebControls;
 using TZ.BLL;
 using Wuqi.Webdiyer;
 
-namespace TZ.WebApp917.Admins.Users
+namespace TZ.WebApp917.Admins.FriendShips
 {
-    public partial class Users_List : System.Web.UI.Page
+    public partial class FriendShips_List : System.Web.UI.Page
     {
-        private UsersService usersSvc = new UsersService();
-        private RolesService rolesSvc =new RolesService();
+        private FriendShipsService friendShipsService=new FriendShipsService();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
                 return;
             Bind("");
         }
-
-        public string GetRolesName(Guid id)
+        public void Bind(string title)
         {
-            return rolesSvc.GetRolesById(id).Roles_Title;
-        }
-        public void Bind(string nickName)
-        {
-            var list = usersSvc.GetUsersByNickName(nickName);
+            var list = friendShipsService.GetFriendShipsByTitle(title);
             PagedDataSource pds = new PagedDataSource();
             pds.DataSource = list;
             pds.AllowPaging = true;
-            pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1; 
+            pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
             pds.PageSize = AspNetPager1.PageSize;
             AspNetPager1.RecordCount = list.Count;
-            this.RepUsersList.DataSource = pds;
-            this.RepUsersList.DataBind();
+            this.RepFriendShipsList.DataSource = pds;
+            this.RepFriendShipsList.DataBind();
         }
         protected void AspNetPager1_OnPageChanging(object src, PageChangingEventArgs e)
         {
